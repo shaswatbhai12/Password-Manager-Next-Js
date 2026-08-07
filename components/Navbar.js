@@ -4,6 +4,7 @@ import { Moon, MoonIcon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu"
+import { SignInButton, Show, UserButton} from '@clerk/nextjs'
 
 const Navbar = () => {
     const { setTheme } = useTheme()
@@ -15,7 +16,7 @@ const Navbar = () => {
         <li>About</li>
         <li>Services</li>
       </ul>
-      <div>
+      <div className='flex justify-center gap-2 items-center'>
         <DropdownMenu>
             <DropdownMenuTrigger className="inline-flex h-9 w-9 items-center justify-center rounded-md border bg-background hover:bg-accent">
                     <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"/>
@@ -34,6 +35,16 @@ const Navbar = () => {
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
+        <Show when="signed-out">
+            <SignInButton mode='modal'> 
+                <Button  variant="default">
+                    Sign In
+                </Button>
+            </SignInButton>
+        </Show>
+        <Show when="signed-in">
+            <UserButton />
+        </Show>
       </div>
     </nav>
   )
