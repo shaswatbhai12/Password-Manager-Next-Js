@@ -4,11 +4,13 @@ export default function CardList(){
     const cards = [
         {
             cardNumber: "**** **** **** 1234",
-            expiryDate: "12/27"
+            expiryDate: "12/27",
+            cvv: "***"
         },
         {
             cardNumber: "**** **** **** 5678",
-            expiryDate: "11/28"
+            expiryDate: "11/28",
+            cvv: "***"
         },
     ];
 
@@ -29,6 +31,10 @@ export default function CardList(){
                             <p className="text-sm text-muted-foreground">
                                 Expires {card.expiryDate}
                             </p>
+
+                            {/* <p className="text-sm text-muted-foreground">
+                                CVV {card.cvv}
+                            </p> */}
                         </div>
                     </div>
                 ))}

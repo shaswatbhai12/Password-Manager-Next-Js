@@ -1,5 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"
 import AddCard from "@/components/AddCard"
+import AddPassword from "@/components/AddPassword";
+import CardList from "@/components/CardList";
+import PasswordList from "@/components/PasswordList";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "",
+  description: ""
+}
 
 export default function Home() {
   return (
@@ -15,19 +24,19 @@ export default function Home() {
 
             <div className="space-y-3">
               <h2 className="text-2xl font-bold">Add a Password</h2>
-              {/* <AddPassword /> */}
+              <AddPassword />
             </div>
         </section>
 
         <section className="mt-12 grid gap-8 lg:grid-cols-2">
           <div className="space-y-3">
             <h2 className="text-2xl font-bold">Your Cards</h2>
-            {/* <CardList /> */}
+            <CardList />
           </div>
 
           <div className="space-y-3">
             <h2 className="text-2xl font-bold">Your Passwords</h2>
-            {/* <PasswordList /> */}
+            <PasswordList />
           </div>
         </section>        
       </main>  

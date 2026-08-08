@@ -37,7 +37,6 @@ export default function AddCard(){
                         <Input type="text" placeholder="1234 5678 9012 3456" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} id="cardNumber" />
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
                             <Label htmlFor="expiryDate">Expiry Date</Label>
                             <Input type="text" placeholder="MM/YY" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} id="cardNumber" />
@@ -47,7 +46,6 @@ export default function AddCard(){
                             <Label htmlFor="cvv">CVV</Label>
                             <Input type="text" placeholder="123" value={cvv} onChange={(e) => setCvv(e.target.value)} id="cvv" />
                         </div>
-                    </div>
 
                     <Button type="submit" className="w-full">
                         Add Card

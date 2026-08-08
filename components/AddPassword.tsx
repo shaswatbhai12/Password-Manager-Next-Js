@@ -47,6 +47,10 @@ export default function AddPassword(){
                         <Label htmlFor="password">Password</Label>
                         <Input id="password" type="password" placeholder="****" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
+
+                    <Button type="submit" className="w-full">
+                        Add Password
+                    </Button>
                 </form>
             </CardContent>
         </Card>
