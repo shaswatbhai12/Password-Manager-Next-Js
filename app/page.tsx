@@ -6,8 +6,8 @@ import PasswordList from "@/components/PasswordList";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: ""
+  title: "NoPass - Home",
+  description: "This is HomePage of my Password Manager"
 }
 
 export default function Home() {
