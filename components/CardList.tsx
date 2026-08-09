@@ -1,18 +1,8 @@
+import { getCards } from "@/actions/actions"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
  
-export default function CardList(){
-    const cards = [
-        {
-            cardNumber: "**** **** **** 1234",
-            expiryDate: "12/27",
-            cvv: "***"
-        },
-        {
-            cardNumber: "**** **** **** 5678",
-            expiryDate: "11/28",
-            cvv: "***"
-        },
-    ];
+export default async function CardList(){
+    const cards = await getCards()
 
     return(
         <Card>
@@ -21,6 +11,10 @@ export default function CardList(){
             </CardHeader>
 
             <CardContent className="space-y-3">
+
+                {cards.length === 0 ? (
+                    p.text-sm.text-muted-foreground
+                )}
                 {cards.map((card, index) => (
                     <div key={index} className="flex items-center justify-between rounded-lg border p-4">
                         <div>

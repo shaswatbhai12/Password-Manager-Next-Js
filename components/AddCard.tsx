@@ -4,6 +4,7 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { toast } from "react-hot-toast"
+import { addCardServer } from "@/actions/actions"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { Input } from "./ui/input"
@@ -27,11 +28,21 @@ export default function AddCard(){
         }
     })
 
-    const onSubmit = (data: CardFormData) => {
-        console.log("Card Added:", data);
-        toast.success("Card Added Successfully")
+    const onSubmit =  async (data: CardFormData) => {
+        try{
+            await addCardServer(
+                data.cardNumber,
+                data.expiryDate,
+                Number(data.cvv)
+            );
 
-        reset();
+            console.log("Card Added:", data);
+            toast.success("Card Added Successfully")
+            reset();
+        } catch(error){
+            console.log(error)
+            toast.error("Failed to Add Card")
+        }
     };
 
     return(
