@@ -13,17 +13,17 @@ export default async function CardList(){
             <CardContent className="space-y-3">
 
                 {cards.length === 0 ? (
-                    p.text-sm.text-muted-foreground
-                )}
-                {cards.map((card, index) => (
+                    <p className="text-sm text-muted-foreground">No Cards Added Yet</p>
+                ) : (
+                 cards.map((card, index) => (
                     <div key={index} className="flex items-center justify-between rounded-lg border p-4">
                         <div>
                             <p className="font-medium">
-                                {card.cardNumber}
+                                {card.cardNo}
                             </p>
 
                             <p className="text-sm text-muted-foreground">
-                                Expires {card.expiryDate}
+                                Expires {card.expiry}
                             </p>
 
                             {/* <p className="text-sm text-muted-foreground">
@@ -31,7 +31,7 @@ export default async function CardList(){
                             </p> */}
                         </div>
                     </div>
-                ))}
+                )))}
             </CardContent>
         </Card>
     )
