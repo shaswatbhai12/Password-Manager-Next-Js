@@ -3,7 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 export default function About(){
     return(
         <main className="mx-auto max-w-4xl px-4 py-12">
-            <div className="space-y-8">
+            <div className="mx-auto max-w-3xl space-y-4">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold tracking-tight">About NoPass</h1>
 
