@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
@@ -8,9 +8,14 @@ import Link from 'next/link'
 
 const Navbar = () => {
     const { theme, setTheme } = useTheme()
+    // const { menuOpen, setMenuOpen } = useState(false)
     const toggleTheme = () => {
         setTheme(theme === 'dark' ? 'light' : 'dark');
     };
+
+    // const closeMenu = () => {
+    //   setMenuOpen(false)
+    // }
   return (
     <nav className='flex justify-between items-center px-4 h-16 bg-primary/20 text-foreground'>
         <Link href="/" ><span className='font-bold text-xl'>NoPass</span></Link>
