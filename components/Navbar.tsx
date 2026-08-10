@@ -4,6 +4,7 @@ import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import { SignInButton, Show, UserButton} from '@clerk/nextjs'
+import Link from 'next/link'
 
 const Navbar = () => {
     const { theme, setTheme } = useTheme()
@@ -12,11 +13,10 @@ const Navbar = () => {
     };
   return (
     <nav className='flex justify-between items-center px-4 h-16 bg-primary/20 text-foreground'>
-        <span className='font-bold text-xl'>NoPass</span>
+        <Link href="/" ><span className='font-bold text-xl'>NoPass</span></Link>
       <ul className='flex gap-5 justify-start items-center'>
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
+        <Link href="/"><li>Home</li></Link>
+        <Link href="/about"><li>About</li></Link>
       </ul>
       <div className='flex justify-center gap-2 items-center'>
             <Button className="relative" variant="outline" size="icon" onClick={toggleTheme}>

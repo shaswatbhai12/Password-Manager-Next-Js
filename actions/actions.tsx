@@ -51,7 +51,7 @@ export async function getCards() {
     const { userId } = await auth()
 
     if(!userId){
-        return[]
+        throw new Error("You must be signed In")
     }
 
     const client = await clerkClient()
@@ -67,7 +67,7 @@ export async function addPasswordServer(website: string, username: string, passw
     const { userId } = await auth()
 
     if (!userId) {
-        return[]
+        throw new Error("You must be Signed In")
     }
 
     const client = await clerkClient()
