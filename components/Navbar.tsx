@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
-import { SignInButton, Show, UserButton} from '@clerk/nextjs'
+import { SignInButton, Show, UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 
 const Navbar = () => {
