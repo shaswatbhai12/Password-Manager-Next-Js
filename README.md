@@ -5,11 +5,14 @@
 
 ## Tech Stack
  -**Frontend** & **Backend** - TypeScript
+
  -**Storage** - Clerk Private MetaData
+
  -**Authentication** - Clerk
 
 ## What I Learnt
  -**Auth with Clerk** - I learnt how to authenticate ser with Clerk
+
  -**Saving credentials in Clerk** - I learnt how to save data in Clerk Private MetaData 
 
 ## Most Challenging Part
@@ -17,4 +20,5 @@
 
 ## How to run It & Live Demo
  -**Live Link** - [Password Manager](https://password-manager-next-js.vercel.app/)
+ 
  -**To Run Locally** - [Git Clone](https://github.com/shaswatbhai12/Password-Manager-Next-Js.git)
